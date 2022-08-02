@@ -1,2 +1,3 @@
+$Global
 EOF
 variable variables
