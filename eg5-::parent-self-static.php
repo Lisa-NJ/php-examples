@@ -2,9 +2,14 @@
 
 // :: allows access to static, constant, and overridden properties or methods of a class.
 // parent::  self::
+// private protected public
 
 class MyClass {
     const CONST_VALUE = 'A constant value';
+    
+    protected function myFunc() {
+        echo "MyClass::myFunc()\n";
+    }
 }
 
 $classname = 'MyClass';
@@ -20,10 +25,20 @@ class OtherClass extends MyClass
         echo parent::CONST_VALUE . "\n";
         echo self::$my_static . "\n";
     }
+    // Override parent's definition
+    public function myFunc()
+    {
+        // But still call the parent function
+        parent::myFunc();
+        echo "OtherClass::myFunc()\n";
+    }
 }
 
 $classname = 'OtherClass';
 $classname::doubleColon();
 
 OtherClass::doubleColon();
+
+$class = new OtherClass();
+$class->myFunc();
 ?>
