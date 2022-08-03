@@ -28,4 +28,24 @@ $output = 'output = ' . $start . $end;
 
 echo $output;
 
+/**  2 ways to declare an array: array(), []
+ *   array('I am A.', 'I am B.', 'I am C.') equals to 
+ *   array(
+ *      0 => 'I am A.',
+ *      1 => 'I am B.',
+ *      2 => 'I am C.'
+ *   )
+ */
+
+$array = array(
+    "foo" => "bar",
+    "bar" => "foo",
+);
+$array1 = [
+    "foo" => "bar",
+    "bar" => "foo",
+];
+
+echo count($array);
+
 ?>
