@@ -2,6 +2,10 @@
 $foo = 'Bob';              // Assign the value 'Bob' to $foo
 $bar = &$foo;              // Reference $foo via $bar.
 $bar = "My name is $bar";  // Alter $bar...
+  
+echo 'My name is $foo';  // My name is $foo -- "" != ''
+echo "My name is $foo";
+echo "My name is {$foo}";
 
 echo $bar;
 echo $foo; 
