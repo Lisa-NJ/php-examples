@@ -5,7 +5,7 @@
   }';
   $data = json_decode($json);
   echo $data->title . "</br>";
-  echo "123\n";
+  echo "123\n";  // "\n" - no use
   echo $data->site;
   //echo $data["title"]; ???
 ?>
